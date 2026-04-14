@@ -3,7 +3,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 const Footer = () => (
   <footer className="border-t border-border/30 py-12 px-4">
     <div className="container mx-auto">
-      <div className="flex flex-col md:flex-row items-left justify-between gap-6">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <a href="#" className="font-heading text-2xl align-left font-bold">
             <svg xmlns="http://www.w3.org/2000/svg" width="240" height="40" viewBox="0 0 1066 205" fill="none">
