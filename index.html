@@ -224,14 +224,20 @@
 
     /* Navigation */
     .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 20px 0;
-        z-index: 100;
-        transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1e2240;
+    z-index: 100;
+    padding: 0.75rem 0;
     }
+    .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    flex-shrink: 0;
+}
 
     .navbar.scrolled {
         background: rgba(7, 18, 30, 0.8);
