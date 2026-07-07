@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -184,141 +183,170 @@
         right: -100px;
         animation-delay: -10s;
     }
+
     .navbar-nav {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    flex: 1;
-    justify-content: flex-end;
-}
+        display: flex;
+        align-items: center;
+        gap: 2.5rem;
+        flex: 1;
+        justify-content: flex-end;
+    }
+
     .navbar-nav a {
-    font-family: var(--font-body);
-    color: #ffffff;
-    font-size: 0.9375rem;
-    font-weight: 300;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    transition: color 200ms ease, opacity 200ms ease;
-    white-space: nowrap;
-    opacity: 0.9;
-}
-.navbar .container {
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
-}.navbar-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-shrink: 0;
-}
+        font-family: var(--font-body);
+        color: #ffffff;
+        font-size: 0.9375rem;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        transition: color 200ms ease, opacity 200ms ease;
+        white-space: nowrap;
+        opacity: 0.9;
+    }
+
+    .navbar .container {
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .navbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-shrink: 0;
+    }
+
     .btn-phone {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 2px solid #4ade80;
-    background: transparent;
-    cursor: pointer;
-    transition: background 200ms ease, transform 200ms ease;
-    text-decoration: none;
-    color: #4ade80;
-}.btn-contact {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 1.25rem;
-    height: 40px;
-    border-radius: 20px;
-    background: #4ade80;
-    color: #0f1a10;
-    font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 0.01em;
-    text-decoration: none;
-    border: none;
-    cursor: pointer;
-    transition: background 200ms ease, transform 200ms ease, box-shadow 200ms ease;
-    white-space: nowrap;
-}.site-footer {
-    background: #131929;
-    padding: 3.5rem 0 2.5rem;
-}
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 2px solid #4ade80;
+        background: transparent;
+        cursor: pointer;
+        transition: background 200ms ease, transform 200ms ease;
+        text-decoration: none;
+        color: #4ade80;
+    }
+
+    .btn-contact {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 1.25rem;
+        height: 40px;
+        border-radius: 20px;
+        background: #4ade80;
+        color: #0f1a10;
+        font-family: var(--font-body);
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        transition: background 200ms ease, transform 200ms ease, box-shadow 200ms ease;
+        white-space: nowrap;
+    }
+
+    .site-footer {
+        background: #131929;
+        padding: 3.5rem 0 2.5rem;
+    }
+
     .footer-logo-link {
-    display: inline-block;
-    opacity: 0.95;
-    transition: opacity 200ms ease;
-}.footer-inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1.2fr 1.3fr;
-    gap: 3rem;
-    align-items: start;
-}.footer-social {
-    display: flex;
-    gap: 0.75rem;
-    align-items: center;
-}.footer-social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.65);
-    transition: border-color 200ms ease, color 200ms ease, background 200ms ease;
-    text-decoration: none;
-}.footer-copy {
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    color: rgba(255, 255, 255, 0.4);
-    font-weight: 300;
-    line-height: 1.5;
-    margin-top: 0.5rem;
-}.footer-heading {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #ffffff;
-    text-transform: uppercase;
-    margin-bottom: 1.25rem;
-}.footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-}.footer-links li a {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
-    transition: color 200ms ease;
-    line-height: 1.4;
-}.footer-address {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.6);
-    font-style: normal;
-    line-height: 1.8;
-}
+        display: inline-block;
+        opacity: 0.95;
+        transition: opacity 200ms ease;
+    }
+
+    .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1.2fr 1.3fr;
+        gap: 3rem;
+        align-items: start;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 0.75rem;
+        align-items: center;
+    }
+
+    .footer-social-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: rgba(255, 255, 255, 0.65);
+        transition: border-color 200ms ease, color 200ms ease, background 200ms ease;
+        text-decoration: none;
+    }
+
+    .footer-copy {
+        font-family: var(--font-body);
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 300;
+        line-height: 1.5;
+        margin-top: 0.5rem;
+    }
+
+    .footer-heading {
+        font-family: var(--font-body);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        color: #ffffff;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .footer-links li a {
+        font-family: var(--font-body);
+        font-size: 0.875rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+        transition: color 200ms ease;
+        line-height: 1.4;
+    }
+
+    .footer-address {
+        font-family: var(--font-body);
+        font-size: 0.875rem;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.6);
+        font-style: normal;
+        line-height: 1.8;
+    }
+
     .footer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-}
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
     @keyframes float {
         0% {
             transform: translate(0, 0);
@@ -358,20 +386,21 @@
 
     /* Navigation */
     .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #1e2240;
-    z-index: 100;
-    padding: 0.75rem 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #1e2240;
+        z-index: 100;
+        padding: 0.75rem 0;
     }
+
     .navbar-logo {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    text-decoration: none;
-    flex-shrink: 0;
-}
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        text-decoration: none;
+        flex-shrink: 0;
+    }
 
     .navbar.scrolled {
         background: rgba(7, 18, 30, 0.8);
@@ -997,6 +1026,300 @@
         transition-delay: 0.4s;
     }
 
+    .feature-section {
+
+        padding: 120px 0;
+
+        background:
+            linear-gradient(90deg, #07111d 0%, #07111d 55%, #09211b 100%);
+
+        overflow: hidden;
+
+    }
+
+    .container {
+
+        width: min(1240px, 90%);
+
+        margin: auto;
+
+    }
+
+    .feature-grid {
+
+        display: grid;
+
+        grid-template-columns: 1fr 1fr;
+
+        align-items: center;
+
+        gap: 90px;
+
+    }
+
+    .feature-tag {
+
+        display: inline-block;
+
+        padding: 10px 18px;
+
+        background: rgba(49, 207, 95, .12);
+
+        border: 1px solid rgba(49, 207, 95, .25);
+
+        color: #46d86b;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+        border-radius: 30px;
+
+        letter-spacing: 1px;
+
+        margin-bottom: 28px;
+
+    }
+
+    .feature-content h2 {
+
+        font-size: 58px;
+
+        font-weight: 700;
+
+        line-height: 1.05;
+
+        color: #fff;
+
+        margin-bottom: 25px;
+
+    }
+
+    .feature-content h2 span {
+
+        display: block;
+
+        color: #49dd70;
+
+    }
+
+    .feature-content p {
+
+        font-size: 18px;
+
+        line-height: 1.9;
+
+        color: #97a3b5;
+
+        margin-bottom: 35px;
+
+        max-width: 560px;
+
+    }
+
+    .feature-list {
+
+        padding: 0;
+
+        margin: 0 0 45px;
+
+        list-style: none;
+
+        display: grid;
+
+        gap: 18px;
+
+    }
+
+    .feature-list li {
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+
+        font-size: 17px;
+
+        color: white;
+
+    }
+
+    .feature-list i {
+
+        color: #42d76b;
+
+        font-size: 18px;
+
+    }
+
+    .btn {
+
+        display: inline-flex;
+
+        align-items: center;
+
+        padding: 15px 28px;
+
+        background: #46d86b;
+
+        border-radius: 14px;
+
+        color: #07111d;
+
+        text-decoration: none;
+
+        font-weight: 700;
+
+        transition: .35s;
+
+    }
+
+    .btn:hover {
+
+        transform: translateY(-4px);
+
+        box-shadow: 0 20px 45px rgba(54, 220, 98, .35);
+
+    }
+
+    .feature-image {
+
+        position: relative;
+
+    }
+
+    .feature-image img {
+
+        width: 100%;
+
+        display: block;
+
+        border-radius: 26px;
+
+        border: 1px solid rgba(255, 255, 255, .08);
+
+        box-shadow:
+            0 40px 100px rgba(0, 0, 0, .45);
+
+    }
+
+    .floating-card {
+
+        position: absolute;
+
+        right: -25px;
+
+        bottom: 40px;
+
+        background: #0c1725;
+
+        padding: 22px 26px;
+
+        border-radius: 18px;
+
+        border: 1px solid rgba(73, 221, 112, .18);
+
+        box-shadow: 0 30px 60px rgba(0, 0, 0, .4);
+
+    }
+
+    .floating-card h4 {
+
+        color: #49dd70;
+
+        font-size: 32px;
+
+        margin: 0 0 6px;
+
+    }
+
+    .floating-card p {
+
+        margin: 0;
+
+        font-size: 14px;
+
+        color: #b3bcc9;
+
+    }
+
+    @media(max-width:1000px) {
+
+        .feature-grid {
+
+            grid-template-columns: 1fr;
+
+            gap: 60px;
+
+        }
+
+        .feature-content {
+
+            order: 2;
+
+        }
+
+        .feature-image {
+
+            order: 1;
+
+        }
+
+        .feature-content h2 {
+
+            font-size: 42px;
+
+        }
+
+    }
+
+    @media(max-width:600px) {
+
+        .feature-section {
+
+            padding: 80px 0;
+
+        }
+
+        .feature-content h2 {
+
+            font-size: 34px;
+
+        }
+
+        .feature-content p {
+
+            font-size: 16px;
+
+        }
+
+        .feature-list li {
+
+            font-size: 15px;
+
+        }
+
+        .btn {
+
+            width: 100%;
+
+            justify-content: center;
+
+        }
+
+        .floating-card {
+
+            position: static;
+
+            margin-top: 20px;
+
+            display: inline-block;
+
+        }
+
+    }
+
     /* Responsive Design */
     @media (max-width: 1024px) {
         .hero-heading {
@@ -1086,6 +1409,547 @@
             gap: 20px;
             text-align: center;
         }
+    }
+
+    /* ===============================
+   KEYLOW CASE STUDY FEATURES
+==================================*/
+
+    :root {
+
+        --bg: #07111d;
+        --bg-light: #0d1725;
+        --green: #49dd70;
+        --green-dark: #123221;
+        --text: #ffffff;
+        --text-light: #9aa6b6;
+        --border: rgba(255, 255, 255, .07);
+
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .feature-section {
+
+        padding: 120px 0;
+        background: linear-gradient(180deg, #07111d, #081823);
+        overflow: hidden;
+
+    }
+
+    .container {
+
+        width: min(1240px, 92%);
+        margin: auto;
+
+    }
+
+    /*==============================
+  COMMON GRID
+==============================*/
+
+    .feature-grid {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 90px;
+
+    }
+
+    .reverse {
+
+        grid-template-columns: 1.05fr .95fr;
+
+    }
+
+    /*==============================
+  TYPOGRAPHY
+==============================*/
+
+    .feature-tag {
+
+        display: inline-block;
+        padding: 10px 18px;
+        border-radius: 30px;
+        background: rgba(73, 221, 112, .10);
+        border: 1px solid rgba(73, 221, 112, .25);
+        color: var(--green);
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 24px;
+
+    }
+
+    .feature-content h2,
+    .section-heading h2 {
+
+        font-size: 58px;
+        line-height: 1.05;
+        color: var(--text);
+        margin-bottom: 25px;
+
+    }
+
+    .feature-content h2 span,
+    .section-heading h2 span {
+
+        display: block;
+        color: var(--green);
+
+    }
+
+    .feature-content p,
+    .section-heading p {
+
+        color: var(--text-light);
+        line-height: 1.9;
+        font-size: 18px;
+
+    }
+
+    .section-heading {
+
+        text-align: center;
+        max-width: 860px;
+        margin: auto;
+        margin-bottom: 70px;
+
+    }
+
+    /*==============================
+  BUTTON
+==============================*/
+
+    .btn {
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 28px;
+        background: var(--green);
+        color: #07111d;
+        text-decoration: none;
+        border-radius: 14px;
+        font-weight: 700;
+        transition: .35s;
+
+    }
+
+    .btn:hover {
+
+        transform: translateY(-4px);
+        box-shadow: 0 20px 45px rgba(73, 221, 112, .30);
+
+    }
+
+    /*==============================
+  SCREENSHOTS
+==============================*/
+
+    .feature-image {
+
+        position: relative;
+
+    }
+
+    .feature-image img {
+
+        width: 100%;
+        display: block;
+        border-radius: 22px;
+
+    }
+
+    .screen-card,
+    .qr-preview {
+
+        background: var(--bg-light);
+        padding: 14px;
+        border-radius: 24px;
+        border: 1px solid var(--border);
+        box-shadow: 0 40px 80px rgba(0, 0, 0, .35);
+        transition: .35s;
+
+    }
+
+    .screen-card:hover,
+    .qr-preview:hover {
+
+        transform: translateY(-8px);
+
+    }
+
+    /*==============================
+  FLOATING CARD
+==============================*/
+
+    .floating-card {
+
+        position: absolute;
+        right: -20px;
+        bottom: 35px;
+
+        background: #0d1725;
+
+        padding: 24px;
+
+        border-radius: 18px;
+
+        border: 1px solid rgba(73, 221, 112, .20);
+
+        box-shadow: 0 25px 60px rgba(0, 0, 0, .40);
+
+    }
+
+    .floating-card h4 {
+
+        color: var(--green);
+        font-size: 34px;
+        margin-bottom: 6px;
+
+    }
+
+    .floating-card p {
+
+        color: var(--text-light);
+        font-size: 14px;
+
+    }
+
+    /*==============================
+  FEATURE LIST
+==============================*/
+
+    .feature-list {
+
+        list-style: none;
+        display: grid;
+        gap: 18px;
+        margin: 35px 0;
+
+    }
+
+    .feature-list li {
+
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        color: white;
+        font-size: 17px;
+
+    }
+
+    .feature-list i {
+
+        color: var(--green);
+
+    }
+
+    /*==============================
+  STEP CARDS
+==============================*/
+
+    .steps {
+
+        display: grid;
+        gap: 18px;
+        margin: 40px 0;
+
+    }
+
+    .step {
+
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        padding: 18px 22px;
+
+        background: rgba(255, 255, 255, .03);
+
+        border: 1px solid var(--border);
+
+        border-radius: 16px;
+
+        color: white;
+
+        transition: .3s;
+
+    }
+
+    .step:hover {
+
+        background: rgba(73, 221, 112, .06);
+
+        border-color: rgba(73, 221, 112, .20);
+
+    }
+
+    .step span {
+
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: var(--green);
+
+        color: #07111d;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-weight: 700;
+
+    }
+
+    /*==============================
+  DUAL SCREENSHOTS
+==============================*/
+
+    .dual-image {
+
+        display: flex;
+        align-items: flex-end;
+        gap: 22px;
+
+    }
+
+    .screen-card:first-child {
+
+        width: 60%;
+
+    }
+
+    .small-card {
+
+        width: 40%;
+        margin-bottom: 50px;
+
+    }
+
+    /*==============================
+  GREEN INFO BOX
+==============================*/
+
+    .highlight {
+
+        margin-top: 35px;
+
+        padding: 30px;
+
+        border-radius: 20px;
+
+        background: linear-gradient(135deg, #0f2b20, #11241d);
+
+        border: 1px solid rgba(73, 221, 112, .20);
+
+    }
+
+    .highlight strong {
+
+        display: block;
+
+        color: var(--green);
+
+        font-size: 22px;
+
+        margin-bottom: 12px;
+
+    }
+
+    .highlight p {
+
+        margin: 0;
+
+    }
+
+    /*==============================
+  QR FEATURE CARDS
+==============================*/
+
+    .qr-wrapper {
+
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
+
+    }
+
+    .qr-preview {
+
+        max-width: 900px;
+        width: 100%;
+
+    }
+
+    .qr-features {
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
+
+    }
+
+    .qr-card {
+
+        padding: 35px;
+
+        border-radius: 22px;
+
+        background: rgba(255, 255, 255, .03);
+
+        border: 1px solid var(--border);
+
+        transition: .35s;
+
+    }
+
+    .qr-card:hover {
+
+        transform: translateY(-8px);
+
+        border-color: var(--green);
+
+        background: rgba(73, 221, 112, .05);
+
+    }
+
+    .icon-box {
+
+        width: 62px;
+        height: 62px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 18px;
+
+        background: #133221;
+
+        font-size: 28px;
+
+        margin-bottom: 22px;
+
+    }
+
+    .qr-card h3 {
+
+        color: white;
+        margin-bottom: 12px;
+        font-size: 22px;
+
+    }
+
+    .qr-card p {
+
+        color: var(--text-light);
+        line-height: 1.8;
+
+    }
+
+    /*==============================
+  RESPONSIVE
+==============================*/
+
+    @media(max-width:1000px) {
+
+        .feature-grid,
+        .reverse {
+
+            grid-template-columns: 1fr;
+
+        }
+
+        .feature-content {
+
+            order: 2;
+
+        }
+
+        .feature-image {
+
+            order: 1;
+
+        }
+
+        .feature-content h2,
+        .section-heading h2 {
+
+            font-size: 42px;
+
+        }
+
+        .dual-image {
+
+            flex-direction: column;
+
+        }
+
+        .screen-card,
+        .screen-card:first-child,
+        .small-card {
+
+            width: 100%;
+            margin: 0;
+
+        }
+
+        .qr-features {
+
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+    }
+
+    @media(max-width:700px) {
+
+        .feature-section {
+
+            padding: 80px 0;
+
+        }
+
+        .feature-content h2,
+        .section-heading h2 {
+
+            font-size: 34px;
+
+        }
+
+        .feature-content p,
+        .section-heading p {
+
+            font-size: 16px;
+
+        }
+
+        .qr-features {
+
+            grid-template-columns: 1fr;
+
+        }
+
+        .btn {
+
+            width: 100%;
+
+        }
+
+        .floating-card {
+
+            position: static;
+            margin-top: 20px;
+
+        }
+
     }
 </style>
 
@@ -1452,6 +2316,277 @@
                 <a href="#contact" class="btn btn-secondary btn-large">Contact Sales</a>
             </div>
         </div>
+        <section class="feature-section">
+
+            <div class="container">
+
+                <div class="feature-grid">
+
+                    <div class="feature-content">
+
+                        <span class="feature-tag">
+                            FEATURE 01
+                        </span>
+
+                        <h2>
+                            Inventory Management
+                            <span>+ Unique SKU Generation</span>
+                        </h2>
+
+                        <p>
+                            Every inventory item receives a unique SKU automatically, making
+                            warehouse operations faster, searchable and completely traceable.
+                            Staff can filter inventory by event, location, tags and assignment
+                            status without relying on spreadsheets.
+                        </p>
+
+                        <ul class="feature-list">
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Automatic 8-character SKU Generation
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Advanced Inventory Filters
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Assigned / Unassigned Tracking
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Search by SKU, Title or ASIN
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                One-click CSV Export
+                            </li>
+
+                        </ul>
+
+                        <a href="#" class="btn">
+                            Learn More →
+                        </a>
+
+                    </div>
+
+
+                    <div class="feature-image">
+
+                        <img src="inventory-dashboard.webp">
+
+                        <div class="floating-card">
+
+                            <h4>11K+</h4>
+
+                            <p>Inventory Items Managed</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="feature-section feature-alt">
+
+            <div class="container">
+
+                <div class="feature-grid reverse">
+
+                    <!-- Images -->
+
+                    <div class="feature-image dual-image">
+
+                        <div class="screen-card">
+                            <img src="barcode-add-item.png" alt="">
+                        </div>
+
+                        <div class="screen-card small-card">
+                            <img src="webcam-scanner.png" alt="">
+                        </div>
+
+                    </div>
+
+                    <!-- Content -->
+
+                    <div class="feature-content">
+
+                        <span class="feature-tag">
+                            FEATURE 02
+                        </span>
+
+                        <h2>
+                            Barcode +
+                            <span>Webcam Scanning</span>
+                        </h2>
+
+                        <p>
+
+                            Capture product information instantly using your browser's
+                            webcam. Scan any barcode and Keylow automatically retrieves
+                            product details, images and pricing from Amazon, eliminating
+                            manual inventory entry.
+
+                        </p>
+
+                        <div class="steps">
+
+                            <div class="step">
+                                <span>01</span>
+                                Open Add Item and select Barcode Lookup.
+                            </div>
+
+                            <div class="step">
+                                <span>02</span>
+                                Launch the built-in webcam scanner.
+                            </div>
+
+                            <div class="step">
+                                <span>03</span>
+                                Scan product barcode in seconds.
+                            </div>
+
+                            <div class="step">
+                                <span>04</span>
+                                Amazon API fills product title, images and MSRP automatically.
+                            </div>
+
+                        </div>
+
+                        <div class="highlight">
+
+                            <strong>No Hardware Required</strong>
+
+                            <p>
+
+                                Works directly inside the browser using WebRTC.
+                                No external barcode scanner is needed.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="feature-section qr-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="feature-tag">
+                        FEATURE 03
+                    </span>
+
+                    <h2>
+                        QR Code Generation
+                        <span>Per Inventory Item</span>
+                    </h2>
+
+                    <p>
+                        Every inventory item automatically receives a downloadable QR code
+                        containing its SKU, title, sourced-by information and MSRP. Staff
+                        can scan the code anywhere in the warehouse to instantly retrieve
+                        the complete inventory record without manual searching.
+                    </p>
+
+                </div>
+
+
+                <div class="qr-wrapper">
+
+                    <div class="qr-preview">
+
+                        <img src="qr-code-popup.png" alt="QR Code Generation">
+
+                    </div>
+
+                </div>
+
+
+                <div class="qr-features">
+
+                    <div class="qr-card">
+
+                        <div class="icon-box">
+                            📱
+                        </div>
+
+                        <h3>Instant Item Lookup</h3>
+
+                        <p>
+                            Scan any QR code to open the exact inventory record within
+                            seconds.
+                        </p>
+
+                    </div>
+
+
+                    <div class="qr-card">
+
+                        <div class="icon-box">
+                            🏷️
+                        </div>
+
+                        <h3>Printable Labels</h3>
+
+                        <p>
+                            Download and print QR labels for every product before storing
+                            it in the warehouse.
+                        </p>
+
+                    </div>
+
+
+                    <div class="qr-card">
+
+                        <div class="icon-box">
+                            ✔
+                        </div>
+
+                        <h3>Pickup Verification</h3>
+
+                        <p>
+                            Verify the correct item during customer collection and reduce
+                            handoff errors.
+                        </p>
+
+                    </div>
+
+
+                    <div class="qr-card">
+
+                        <div class="icon-box">
+                            ⚡
+                        </div>
+
+                        <h3>One Click Download</h3>
+
+                        <p>
+                            Generate and download QR codes directly from the inventory
+                            actions menu.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
     </section>
 
     <!-- Footer -->
