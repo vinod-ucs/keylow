@@ -785,6 +785,27 @@
         color: var(--text-secondary);
         opacity: 0.5;
     }
+    /* No-image feature layout */
+.feature-grid.no-image {
+    grid-template-columns: 1fr;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.feature-grid.no-image .feature-list li {
+    justify-content: center;
+}
+
+.feature-grid.no-image .highlight {
+    text-align: left;
+    margin: 35px auto 0;
+    max-width: 420px;
+}
+
+.feature-grid.no-image .highlight strong {
+    font-size: 32px;
+}
 
     /* Why Keylow */
     .why-keylow {
