@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keylow.io | AI-powered Inventory Management for Auctions</title>
+    <title>LotVault.io | AI-powered Inventory Management for Auctions</title>
     <meta name="description"
         content="Manage inventory, scan barcodes, generate QR codes, automate product data, and streamline auction operations from one intelligent platform.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -785,29 +785,8 @@
         color: var(--text-secondary);
         opacity: 0.5;
     }
-    /* No-image feature layout */
-.feature-grid.no-image {
-    grid-template-columns: 1fr;
-    max-width: 720px;
-    margin: 0 auto;
-    text-align: center;
-}
 
-.feature-grid.no-image .feature-list li {
-    justify-content: center;
-}
-
-.feature-grid.no-image .highlight {
-    text-align: left;
-    margin: 35px auto 0;
-    max-width: 420px;
-}
-
-.feature-grid.no-image .highlight strong {
-    font-size: 32px;
-}
-
-    /* Why Keylow */
+    /* Why LotVault */
     .why-keylow {
         padding: 120px 0;
     }
@@ -950,23 +929,6 @@
         color: var(--text-secondary);
     }
 
-    /* Final CTA */
-    .final-cta {
-        padding: 160px 0;
-        position: relative;
-    }
-
-    .cta-glow {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 800px;
-        height: 400px;
-        background: radial-gradient(ellipse, rgba(76, 175, 80, 0.2) 0%, transparent 70%);
-        z-index: -1;
-    }
-
     /* Footer */
     .footer {
         border-top: 1px solid var(--border-color);
@@ -1051,8 +1013,7 @@
 
         padding: 120px 0;
 
-        background:
-            linear-gradient(90deg, #07111d 0%, #07111d 55%, #09211b 100%);
+        background: linear-gradient(180deg, #07111d, #081823);
 
         overflow: hidden;
 
@@ -1060,288 +1021,366 @@
 
     .container {
 
-        width: min(1240px, 90%);
+        width: min(1240px, 92%);
 
         margin: auto;
 
     }
 
+    /*==============================
+  COMMON GRID
+==============================*/
+
     .feature-grid {
 
         display: grid;
-
         grid-template-columns: 1fr 1fr;
-
         align-items: center;
-
         gap: 90px;
 
     }
 
-    .feature-tag {
+    .reverse {
 
-        display: inline-block;
-
-        padding: 10px 18px;
-
-        background: rgba(49, 207, 95, .12);
-
-        border: 1px solid rgba(49, 207, 95, .25);
-
-        color: #46d86b;
-
-        font-size: 13px;
-
-        font-weight: 600;
-
-        border-radius: 30px;
-
-        letter-spacing: 1px;
-
-        margin-bottom: 28px;
+        grid-template-columns: 1.05fr .95fr;
 
     }
 
-    .feature-content h2 {
+    /* No-image feature layout: single centered column, used when a
+       feature section has no accompanying screenshot */
+    .feature-grid.no-image {
+        grid-template-columns: 1fr;
+        max-width: 720px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .feature-grid.no-image .feature-list li {
+        justify-content: center;
+    }
+
+    .feature-grid.no-image .steps {
+        text-align: left;
+        max-width: 480px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feature-grid.no-image .highlight {
+        text-align: left;
+        margin: 35px auto 0;
+        max-width: 480px;
+    }
+
+    .feature-grid.no-image .highlight strong {
+        font-size: 32px;
+    }
+
+    /*==============================
+  TYPOGRAPHY
+==============================*/
+
+    .feature-tag {
+
+        display: inline-block;
+        padding: 10px 18px;
+        border-radius: 30px;
+        background: rgba(73, 221, 112, .10);
+        border: 1px solid rgba(73, 221, 112, .25);
+        color: #49dd70;
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 600;
+        margin-bottom: 24px;
+
+    }
+
+    .feature-content h2,
+    .section-heading h2 {
 
         font-size: 58px;
-
-        font-weight: 700;
-
         line-height: 1.05;
-
-        color: #fff;
-
+        color: #ffffff;
         margin-bottom: 25px;
 
     }
 
-    .feature-content h2 span {
+    .feature-content h2 span,
+    .section-heading h2 span {
+
+        display: block;
+        color: #49dd70;
+
+    }
+
+    .feature-content p,
+    .section-heading p {
+
+        color: #9aa6b6;
+        line-height: 1.9;
+        font-size: 18px;
+
+    }
+
+    .section-heading {
+
+        text-align: center;
+        max-width: 860px;
+        margin: auto;
+        margin-bottom: 70px;
+
+    }
+
+    /*==============================
+  BUTTON
+==============================*/
+
+    .feature-content .btn,
+    .section-heading .btn {
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 28px;
+        background: #49dd70;
+        color: #07111d;
+        text-decoration: none;
+        border-radius: 14px;
+        font-weight: 700;
+        transition: .35s;
+
+    }
+
+    .feature-content .btn:hover,
+    .section-heading .btn:hover {
+
+        transform: translateY(-4px);
+        box-shadow: 0 20px 45px rgba(73, 221, 112, .30);
+
+    }
+
+    /*==============================
+  FLOATING CARD
+==============================*/
+
+    .highlight {
+
+        margin-top: 35px;
+
+        padding: 30px;
+
+        border-radius: 20px;
+
+        background: linear-gradient(135deg, #0f2b20, #11241d);
+
+        border: 1px solid rgba(73, 221, 112, .20);
+
+    }
+
+    .highlight strong {
 
         display: block;
 
         color: #49dd70;
 
-    }
+        font-size: 22px;
 
-    .feature-content p {
-
-        font-size: 18px;
-
-        line-height: 1.9;
-
-        color: #97a3b5;
-
-        margin-bottom: 35px;
-
-        max-width: 560px;
+        margin-bottom: 12px;
 
     }
+
+    .highlight p {
+
+        margin: 0;
+
+    }
+
+    /*==============================
+  FEATURE LIST
+==============================*/
 
     .feature-list {
 
-        padding: 0;
-
-        margin: 0 0 45px;
-
         list-style: none;
-
         display: grid;
-
         gap: 18px;
+        margin: 35px 0;
 
     }
 
     .feature-list li {
 
         display: flex;
-
         align-items: center;
-
         gap: 15px;
-
-        font-size: 17px;
-
         color: white;
+        font-size: 17px;
 
     }
 
     .feature-list i {
 
-        color: #42d76b;
-
-        font-size: 18px;
+        color: #49dd70;
 
     }
 
-    .btn {
+    /*==============================
+  STEP CARDS
+==============================*/
 
-        display: inline-flex;
+    .steps {
 
+        display: grid;
+        gap: 18px;
+        margin: 40px 0;
+
+    }
+
+    .step {
+
+        display: flex;
         align-items: center;
+        gap: 18px;
 
-        padding: 15px 28px;
+        padding: 18px 22px;
 
-        background: #46d86b;
+        background: rgba(255, 255, 255, .03);
 
-        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, .07);
+
+        border-radius: 16px;
+
+        color: white;
+
+        transition: .3s;
+
+    }
+
+    .step:hover {
+
+        background: rgba(73, 221, 112, .06);
+
+        border-color: rgba(73, 221, 112, .20);
+
+    }
+
+    .step span {
+
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #49dd70;
 
         color: #07111d;
 
-        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         font-weight: 700;
+
+    }
+
+    /*==============================
+  QR FEATURE CARDS
+==============================*/
+
+    .qr-wrapper {
+
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
+
+    }
+
+    .qr-preview {
+
+        max-width: 900px;
+        width: 100%;
+        background: #0d1725;
+        padding: 14px;
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, .07);
+        box-shadow: 0 40px 80px rgba(0, 0, 0, .35);
+
+    }
+
+    .qr-preview img {
+        width: 100%;
+        display: block;
+        border-radius: 18px;
+    }
+
+    .qr-features {
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 28px;
+
+    }
+
+    .qr-card {
+
+        padding: 35px;
+
+        border-radius: 22px;
+
+        background: rgba(255, 255, 255, .03);
+
+        border: 1px solid rgba(255, 255, 255, .07);
 
         transition: .35s;
 
     }
 
-    .btn:hover {
+    .qr-card:hover {
 
-        transform: translateY(-4px);
+        transform: translateY(-8px);
 
-        box-shadow: 0 20px 45px rgba(54, 220, 98, .35);
+        border-color: #49dd70;
 
-    }
-
-    .feature-image {
-
-        position: relative;
+        background: rgba(73, 221, 112, .05);
 
     }
 
-    .feature-image img {
+    .icon-box {
 
-        width: 100%;
+        width: 62px;
+        height: 62px;
 
-        display: block;
-
-        border-radius: 26px;
-
-        border: 1px solid rgba(255, 255, 255, .08);
-
-        box-shadow:
-            0 40px 100px rgba(0, 0, 0, .45);
-
-    }
-
-    .floating-card {
-
-        position: absolute;
-
-        right: -25px;
-
-        bottom: 40px;
-
-        background: #0c1725;
-
-        padding: 22px 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         border-radius: 18px;
 
-        border: 1px solid rgba(73, 221, 112, .18);
+        background: #133221;
 
-        box-shadow: 0 30px 60px rgba(0, 0, 0, .4);
+        font-size: 28px;
 
-    }
-
-    .floating-card h4 {
-
-        color: #49dd70;
-
-        font-size: 32px;
-
-        margin: 0 0 6px;
+        margin-bottom: 22px;
 
     }
 
-    .floating-card p {
+    .qr-card h3 {
 
-        margin: 0;
-
-        font-size: 14px;
-
-        color: #b3bcc9;
+        color: white;
+        margin-bottom: 12px;
+        font-size: 22px;
 
     }
 
-    @media(max-width:1000px) {
+    .qr-card p {
 
-        .feature-grid {
-
-            grid-template-columns: 1fr;
-
-            gap: 60px;
-
-        }
-
-        .feature-content {
-
-            order: 2;
-
-        }
-
-        .feature-image {
-
-            order: 1;
-
-        }
-
-        .feature-content h2 {
-
-            font-size: 42px;
-
-        }
+        color: #9aa6b6;
+        line-height: 1.8;
 
     }
 
-    @media(max-width:600px) {
+    /*==============================
+  RESPONSIVE
+==============================*/
 
-        .feature-section {
-
-            padding: 80px 0;
-
-        }
-
-        .feature-content h2 {
-
-            font-size: 34px;
-
-        }
-
-        .feature-content p {
-
-            font-size: 16px;
-
-        }
-
-        .feature-list li {
-
-            font-size: 15px;
-
-        }
-
-        .btn {
-
-            width: 100%;
-
-            justify-content: center;
-
-        }
-
-        .floating-card {
-
-            position: static;
-
-            margin-top: 20px;
-
-            display: inline-block;
-
-        }
-
-    }
-
-    /* Responsive Design */
     @media (max-width: 1024px) {
         .hero-heading {
             font-size: 56px;
@@ -1432,453 +1471,6 @@
         }
     }
 
-    /* ===============================
-   KEYLOW CASE STUDY FEATURES
-==================================*/
-
-    :root {
-
-        --bg: #07111d;
-        --bg-light: #0d1725;
-        --green: #49dd70;
-        --green-dark: #123221;
-        --text: #ffffff;
-        --text-light: #9aa6b6;
-        --border: rgba(255, 255, 255, .07);
-
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .feature-section {
-
-        padding: 120px 0;
-        background: linear-gradient(180deg, #07111d, #081823);
-        overflow: hidden;
-
-    }
-
-    .container {
-
-        width: min(1240px, 92%);
-        margin: auto;
-
-    }
-
-    /*==============================
-  COMMON GRID
-==============================*/
-
-    .feature-grid {
-
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 90px;
-
-    }
-
-    .reverse {
-
-        grid-template-columns: 1.05fr .95fr;
-
-    }
-
-    /*==============================
-  TYPOGRAPHY
-==============================*/
-
-    .feature-tag {
-
-        display: inline-block;
-        padding: 10px 18px;
-        border-radius: 30px;
-        background: rgba(73, 221, 112, .10);
-        border: 1px solid rgba(73, 221, 112, .25);
-        color: var(--green);
-        font-size: 13px;
-        letter-spacing: 1px;
-        font-weight: 600;
-        margin-bottom: 24px;
-
-    }
-
-    .feature-content h2,
-    .section-heading h2 {
-
-        font-size: 58px;
-        line-height: 1.05;
-        color: var(--text);
-        margin-bottom: 25px;
-
-    }
-
-    .feature-content h2 span,
-    .section-heading h2 span {
-
-        display: block;
-        color: var(--green);
-
-    }
-
-    .feature-content p,
-    .section-heading p {
-
-        color: var(--text-light);
-        line-height: 1.9;
-        font-size: 18px;
-
-    }
-
-    .section-heading {
-
-        text-align: center;
-        max-width: 860px;
-        margin: auto;
-        margin-bottom: 70px;
-
-    }
-
-    /*==============================
-  BUTTON
-==============================*/
-
-    .btn {
-
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 15px 28px;
-        background: var(--green);
-        color: #07111d;
-        text-decoration: none;
-        border-radius: 14px;
-        font-weight: 700;
-        transition: .35s;
-
-    }
-
-    .btn:hover {
-
-        transform: translateY(-4px);
-        box-shadow: 0 20px 45px rgba(73, 221, 112, .30);
-
-    }
-
-    /*==============================
-  SCREENSHOTS
-==============================*/
-
-    .feature-image {
-
-        position: relative;
-
-    }
-
-    .feature-image img {
-
-        width: 100%;
-        display: block;
-        border-radius: 22px;
-
-    }
-
-    .screen-card,
-    .qr-preview {
-
-        background: var(--bg-light);
-        padding: 14px;
-        border-radius: 24px;
-        border: 1px solid var(--border);
-        box-shadow: 0 40px 80px rgba(0, 0, 0, .35);
-        transition: .35s;
-
-    }
-
-    .screen-card:hover,
-    .qr-preview:hover {
-
-        transform: translateY(-8px);
-
-    }
-
-    /*==============================
-  FLOATING CARD
-==============================*/
-
-    .floating-card {
-
-        position: absolute;
-        right: -20px;
-        bottom: 35px;
-
-        background: #0d1725;
-
-        padding: 24px;
-
-        border-radius: 18px;
-
-        border: 1px solid rgba(73, 221, 112, .20);
-
-        box-shadow: 0 25px 60px rgba(0, 0, 0, .40);
-
-    }
-
-    .floating-card h4 {
-
-        color: var(--green);
-        font-size: 34px;
-        margin-bottom: 6px;
-
-    }
-
-    .floating-card p {
-
-        color: var(--text-light);
-        font-size: 14px;
-
-    }
-
-    /*==============================
-  FEATURE LIST
-==============================*/
-
-    .feature-list {
-
-        list-style: none;
-        display: grid;
-        gap: 18px;
-        margin: 35px 0;
-
-    }
-
-    .feature-list li {
-
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        color: white;
-        font-size: 17px;
-
-    }
-
-    .feature-list i {
-
-        color: var(--green);
-
-    }
-
-    /*==============================
-  STEP CARDS
-==============================*/
-
-    .steps {
-
-        display: grid;
-        gap: 18px;
-        margin: 40px 0;
-
-    }
-
-    .step {
-
-        display: flex;
-        align-items: center;
-        gap: 18px;
-
-        padding: 18px 22px;
-
-        background: rgba(255, 255, 255, .03);
-
-        border: 1px solid var(--border);
-
-        border-radius: 16px;
-
-        color: white;
-
-        transition: .3s;
-
-    }
-
-    .step:hover {
-
-        background: rgba(73, 221, 112, .06);
-
-        border-color: rgba(73, 221, 112, .20);
-
-    }
-
-    .step span {
-
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        background: var(--green);
-
-        color: #07111d;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        font-weight: 700;
-
-    }
-
-    /*==============================
-  DUAL SCREENSHOTS
-==============================*/
-
-    .dual-image {
-
-        display: flex;
-        align-items: flex-end;
-        gap: 22px;
-
-    }
-
-    .screen-card:first-child {
-
-        width: 60%;
-
-    }
-
-    .small-card {
-
-        width: 40%;
-        margin-bottom: 50px;
-
-    }
-
-    /*==============================
-  GREEN INFO BOX
-==============================*/
-
-    .highlight {
-
-        margin-top: 35px;
-
-        padding: 30px;
-
-        border-radius: 20px;
-
-        background: linear-gradient(135deg, #0f2b20, #11241d);
-
-        border: 1px solid rgba(73, 221, 112, .20);
-
-    }
-
-    .highlight strong {
-
-        display: block;
-
-        color: var(--green);
-
-        font-size: 22px;
-
-        margin-bottom: 12px;
-
-    }
-
-    .highlight p {
-
-        margin: 0;
-
-    }
-
-    /*==============================
-  QR FEATURE CARDS
-==============================*/
-
-    .qr-wrapper {
-
-        display: flex;
-        justify-content: center;
-        margin-bottom: 80px;
-
-    }
-
-    .qr-preview {
-
-        max-width: 900px;
-        width: 100%;
-
-    }
-
-    .qr-features {
-
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 28px;
-
-    }
-
-    .qr-card {
-
-        padding: 35px;
-
-        border-radius: 22px;
-
-        background: rgba(255, 255, 255, .03);
-
-        border: 1px solid var(--border);
-
-        transition: .35s;
-
-    }
-
-    .qr-card:hover {
-
-        transform: translateY(-8px);
-
-        border-color: var(--green);
-
-        background: rgba(73, 221, 112, .05);
-
-    }
-
-    .icon-box {
-
-        width: 62px;
-        height: 62px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        border-radius: 18px;
-
-        background: #133221;
-
-        font-size: 28px;
-
-        margin-bottom: 22px;
-
-    }
-
-    .qr-card h3 {
-
-        color: white;
-        margin-bottom: 12px;
-        font-size: 22px;
-
-    }
-
-    .qr-card p {
-
-        color: var(--text-light);
-        line-height: 1.8;
-
-    }
-
-    /*==============================
-  RESPONSIVE
-==============================*/
-
     @media(max-width:1000px) {
 
         .feature-grid,
@@ -1888,37 +1480,10 @@
 
         }
 
-        .feature-content {
-
-            order: 2;
-
-        }
-
-        .feature-image {
-
-            order: 1;
-
-        }
-
         .feature-content h2,
         .section-heading h2 {
 
             font-size: 42px;
-
-        }
-
-        .dual-image {
-
-            flex-direction: column;
-
-        }
-
-        .screen-card,
-        .screen-card:first-child,
-        .small-card {
-
-            width: 100%;
-            margin: 0;
 
         }
 
@@ -1957,20 +1522,6 @@
             grid-template-columns: 1fr;
 
         }
-
-        .btn {
-
-            width: 100%;
-
-        }
-
-        .floating-card {
-
-            position: static;
-            margin-top: 20px;
-
-        }
-
     }
 </style>
 
@@ -2044,7 +1595,7 @@
                 <p class="hero-subheading">Manage inventory, scan barcodes, generate QR codes, automate product data,
                     and streamline auction operations from one intelligent platform.</p>
                 <div class="hero-cta">
-                    <a href="#book-demo" class="btn btn-primary btn-large">Book Live Demo</a>
+                    <a href="#features" class="btn btn-primary btn-large">Book Live Demo</a>
                     <a href="#tour" class="btn btn-secondary btn-large"><i data-lucide="play-circle"></i> Watch Product
                         Tour</a>
                 </div>
@@ -2055,7 +1606,7 @@
                     <div class="panel-header">
                         <div class="dots"><span></span><span></span><span></span></div>
                     </div>
-                    <img src="dashboard_mockup.png" alt="Keylow Dashboard" class="dashboard-img">
+                    <img src="dashboard_mockup.png" alt="LotVault Dashboard" class="dashboard-img">
 
                     <!-- Floating Elements -->
                     <div class="floating-card float-1">
@@ -2117,57 +1668,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features-section" id="features">
-        <div class="container">
-            <div class="feature-row fade-up">
-                <div class="feature-content">
-                    <h2 class="section-heading">Intelligent <span class="text-gradient">Inventory Management</span></h2>
-                    <p class="feature-desc">Everything you need to run your auction warehouse efficiently.</p>
-                    <ul class="feature-list">
-                        <li><i data-lucide="check-circle-2" class="text-green"></i> <strong>Automatic SKU
-                                Generation:</strong> Create unique SKUs instantly.</li>
-                        <li><i data-lucide="check-circle-2" class="text-green"></i> <strong>Barcode Scanning:</strong>
-                            Scan and update stock in seconds.</li>
-                        <li><i data-lucide="check-circle-2" class="text-green"></i> <strong>Amazon Product
-                                Integration:</strong> Pull ASIN data automatically.</li>
-                        <li><i data-lucide="check-circle-2" class="text-green"></i> <strong>Bulk CSV Import:</strong>
-                            Upload hundreds of items at once.</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary mt-4">Learn More <i data-lucide="arrow-right"></i></a>
-                </div>
-                <div class="feature-visual">
-                    <div class="glass-panel image-panel">
-                        <img src="dashboard_mockup.png" alt="Inventory Features">
-                    </div>
-                </div>
-            </div>
-
-            <div class="feature-row reverse fade-up">
-                <div class="feature-content">
-                    <h2 class="section-heading">Built for the <span class="text-gradient">Warehouse Floor</span></h2>
-                    <p class="feature-desc">Empower your staff with mobile-first tools designed for speed.</p>
-                    <ul class="feature-list">
-                        <li><i data-lucide="check-circle-2" class="text-green"></i> <strong>QR Code Generation:</strong>
-                            Print labels directly from the app.</li>
-                        <li><i data-lucide="check-circle-2" class="text-green"></i> <strong>Customer QR
-                                Check-In:</strong> Fast load-outs and pickups.</li>
-                        <li><i data-lucide="check-circle-2" class="text-green"></i> <strong>Role-Based Access:</strong>
-                            Control what your staff can see and do.</li>
-                        <li><i data-lucide="check-circle-2" class="text-green"></i> <strong>Real-Time
-                                Dashboard:</strong> Track activity across your entire operation.</li>
-                    </ul>
-                    <a href="#" class="btn btn-secondary mt-4">Learn More <i data-lucide="arrow-right"></i></a>
-                </div>
-                <div class="feature-visual">
-                    <div class="glass-panel image-panel mobile-panel">
-                        <img src="mobile_mockup.png" alt="Mobile Features">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- How It Works Section -->
     <section class="how-it-works" id="how-it-works">
         <div class="container">
@@ -2214,11 +1714,11 @@
         </div>
     </section>
 
-    <!-- Why Keylow Grid -->
+    <!-- Why LotVault Grid -->
     <section class="why-keylow">
         <div class="container">
             <div class="section-header text-center fade-up">
-                <h2 class="section-heading">Why Choose Keylow?</h2>
+                <h2 class="section-heading">Why Choose LotVault?</h2>
             </div>
             <div class="grid-4 why-grid fade-up delay-1">
                 <div class="benefit-item">
@@ -2311,9 +1811,9 @@
                         data-lucide="star" class="filled"></i><i data-lucide="star" class="filled"></i><i
                         data-lucide="star" class="filled"></i>
                 </div>
-                <blockquote class="quote">"Keylow has completely transformed our warehouse operations. What used to take
-                    our team hours of manual data entry now happens in seconds with their barcode scanning and automatic
-                    SKU generation."</blockquote>
+                <blockquote class="quote">"LotVault has completely transformed our warehouse operations. What used to
+                    take our team hours of manual data entry now happens in seconds with their barcode scanning and
+                    automatic SKU generation."</blockquote>
                 <div class="author">
                     <div class="avatar">SJ</div>
                     <div class="author-info">
@@ -2325,293 +1825,259 @@
         </div>
     </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="cta-glow"></div>
-        <div class="container text-center fade-up">
-            <h2 class="section-heading">Ready to Modernize Your Auction Operations?</h2>
-            <p class="section-subtitle">Book a personalized demo and discover how Keylow.io transforms inventory
-                management.</p>
-            <div class="hero-cta justify-center">
-                <a href="#book-demo" class="btn btn-primary btn-large">Book Demo</a>
-                <a href="#contact" class="btn btn-secondary btn-large">Contact Sales</a>
-            </div>
-        </div>
-        <section class="feature-section">
+    <!-- Product Deep-Dive -->
+    <section class="feature-section" id="features">
 
-            <div class="container">
+        <div class="container">
 
-                <div class="feature-grid">
+            <div class="feature-grid no-image">
 
-                    <div class="feature-content">
-
-                        <span class="feature-tag">
-                            FEATURE 01
-                        </span>
-
-                        <h2>
-                            Inventory Management
-                            <span>+ Unique SKU Generation</span>
-                        </h2>
-
-                        <p>
-                            Every inventory item receives a unique SKU automatically, making
-                            warehouse operations faster, searchable and completely traceable.
-                            Staff can filter inventory by event, location, tags and assignment
-                            status without relying on spreadsheets.
-                        </p>
-
-                        <ul class="feature-list">
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                Automatic 8-character SKU Generation
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                Advanced Inventory Filters
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                Assigned / Unassigned Tracking
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                Search by SKU, Title or ASIN
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                One-click CSV Export
-                            </li>
-
-                        </ul>
-
-                        <a href="#" class="btn">
-                            Learn More →
-                        </a>
-
-                    </div>
-
-
-                    <div class="feature-image">
-
-                        <img src="inventory-dashboard.png">
-
-                        <div class="floating-card">
-
-                            <h4>11K+</h4>
-
-                            <p>Inventory Items Managed</p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <section class="feature-section feature-alt">
-
-            <div class="container">
-
-                <div class="feature-grid reverse">
-
-                    <!-- Images -->
-
-                    <div class="feature-image dual-image">
-
-                        <div class="screen-card">
-                            <img src="barcode-add-item.png" alt="">
-                        </div>
-
-                        <div class="screen-card small-card">
-                            <img src="webcam-scanner.png" alt="">
-                        </div>
-
-                    </div>
-
-                    <!-- Content -->
-
-                    <div class="feature-content">
-
-                        <span class="feature-tag">
-                            FEATURE 02
-                        </span>
-
-                        <h2>
-                            Barcode +
-                            <span>Webcam Scanning</span>
-                        </h2>
-
-                        <p>
-
-                            Capture product information instantly using your browser's
-                            webcam. Scan any barcode and Keylow automatically retrieves
-                            product details, images and pricing from Amazon, eliminating
-                            manual inventory entry.
-
-                        </p>
-
-                        <div class="steps">
-
-                            <div class="step">
-                                <span>01</span>
-                                Open Add Item and select Barcode Lookup.
-                            </div>
-
-                            <div class="step">
-                                <span>02</span>
-                                Launch the built-in webcam scanner.
-                            </div>
-
-                            <div class="step">
-                                <span>03</span>
-                                Scan product barcode in seconds.
-                            </div>
-
-                            <div class="step">
-                                <span>04</span>
-                                Amazon API fills product title, images and MSRP automatically.
-                            </div>
-
-                        </div>
-
-                        <div class="highlight">
-
-                            <strong>No Hardware Required</strong>
-
-                            <p>
-
-                                Works directly inside the browser using WebRTC.
-                                No external barcode scanner is needed.
-
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-        <section class="feature-section qr-section">
-
-            <div class="container">
-
-                <div class="section-heading">
+                <div class="feature-content">
 
                     <span class="feature-tag">
-                        FEATURE 03
+                        FEATURE 01
                     </span>
 
                     <h2>
-                        QR Code Generation
-                        <span>Per Inventory Item</span>
+                        Inventory Management
+                        <span>+ Unique SKU Generation</span>
                     </h2>
 
                     <p>
-                        Every inventory item automatically receives a downloadable QR code
-                        containing its SKU, title, sourced-by information and MSRP. Staff
-                        can scan the code anywhere in the warehouse to instantly retrieve
-                        the complete inventory record without manual searching.
+                        Every inventory item receives a unique SKU automatically, making
+                        warehouse operations faster, searchable and completely traceable.
+                        Staff can filter inventory by event, location, tags and assignment
+                        status without relying on spreadsheets.
+                    </p>
+
+                    <ul class="feature-list">
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Automatic 8-character SKU Generation
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Advanced Inventory Filters
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Assigned / Unassigned Tracking
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Search by SKU, Title or ASIN
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-circle-check"></i>
+                            One-click CSV Export
+                        </li>
+
+                    </ul>
+
+                    <div class="highlight">
+                        <strong>11K+</strong>
+                        <p>Inventory items managed and tracked with unique SKUs.</p>
+                    </div>
+
+                    <a href="#" class="btn">
+                        Learn More →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="feature-section feature-alt">
+
+        <div class="container">
+
+            <div class="feature-grid no-image">
+
+                <!-- Content -->
+
+                <div class="feature-content">
+
+                    <span class="feature-tag">
+                        FEATURE 02
+                    </span>
+
+                    <h2>
+                        Barcode +
+                        <span>Webcam Scanning</span>
+                    </h2>
+
+                    <p>
+
+                        Capture product information instantly using your browser's
+                        webcam. Scan any barcode and LotVault automatically retrieves
+                        product details, images and pricing from Amazon, eliminating
+                        manual inventory entry.
+
+                    </p>
+
+                    <div class="steps">
+
+                        <div class="step">
+                            <span>01</span>
+                            Open Add Item and select Barcode Lookup.
+                        </div>
+
+                        <div class="step">
+                            <span>02</span>
+                            Launch the built-in webcam scanner.
+                        </div>
+
+                        <div class="step">
+                            <span>03</span>
+                            Scan product barcode in seconds.
+                        </div>
+
+                        <div class="step">
+                            <span>04</span>
+                            Amazon API fills product title, images and MSRP automatically.
+                        </div>
+
+                    </div>
+
+                    <div class="highlight">
+
+                        <strong>No Hardware Required</strong>
+
+                        <p>
+
+                            Works directly inside the browser using WebRTC.
+                            No external barcode scanner is needed.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="feature-section qr-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="feature-tag">
+                    FEATURE 03
+                </span>
+
+                <h2>
+                    QR Code Generation
+                    <span>Per Inventory Item</span>
+                </h2>
+
+                <p>
+                    Every inventory item automatically receives a downloadable QR code
+                    containing its SKU, title, sourced-by information and MSRP. Staff
+                    can scan the code anywhere in the warehouse to instantly retrieve
+                    the complete inventory record without manual searching.
+                </p>
+
+            </div>
+
+
+            <div class="qr-wrapper">
+
+                <div class="qr-preview">
+
+                    <img src="qr-code-popup.png" alt="QR Code Generation">
+
+                </div>
+
+            </div>
+
+
+            <div class="qr-features">
+
+                <div class="qr-card">
+
+                    <div class="icon-box">
+                        📱
+                    </div>
+
+                    <h3>Instant Item Lookup</h3>
+
+                    <p>
+                        Scan any QR code to open the exact inventory record within
+                        seconds.
                     </p>
 
                 </div>
 
 
-                <div class="qr-wrapper">
+                <div class="qr-card">
 
-                    <div class="qr-preview">
-
-                        <img src="qr-code-popup.png" alt="QR Code Generation">
-
+                    <div class="icon-box">
+                        🏷️
                     </div>
+
+                    <h3>Printable Labels</h3>
+
+                    <p>
+                        Download and print QR labels for every product before storing
+                        it in the warehouse.
+                    </p>
 
                 </div>
 
 
-                <div class="qr-features">
+                <div class="qr-card">
 
-                    <div class="qr-card">
-
-                        <div class="icon-box">
-                            📱
-                        </div>
-
-                        <h3>Instant Item Lookup</h3>
-
-                        <p>
-                            Scan any QR code to open the exact inventory record within
-                            seconds.
-                        </p>
-
+                    <div class="icon-box">
+                        ✔
                     </div>
 
+                    <h3>Pickup Verification</h3>
 
-                    <div class="qr-card">
+                    <p>
+                        Verify the correct item during customer collection and reduce
+                        handoff errors.
+                    </p>
 
-                        <div class="icon-box">
-                            🏷️
-                        </div>
+                </div>
 
-                        <h3>Printable Labels</h3>
 
-                        <p>
-                            Download and print QR labels for every product before storing
-                            it in the warehouse.
-                        </p>
+                <div class="qr-card">
 
+                    <div class="icon-box">
+                        ⚡
                     </div>
 
+                    <h3>One Click Download</h3>
 
-                    <div class="qr-card">
-
-                        <div class="icon-box">
-                            ✔
-                        </div>
-
-                        <h3>Pickup Verification</h3>
-
-                        <p>
-                            Verify the correct item during customer collection and reduce
-                            handoff errors.
-                        </p>
-
-                    </div>
-
-
-                    <div class="qr-card">
-
-                        <div class="icon-box">
-                            ⚡
-                        </div>
-
-                        <h3>One Click Download</h3>
-
-                        <p>
-                            Generate and download QR codes directly from the inventory
-                            actions menu.
-                        </p>
-
-                    </div>
+                    <p>
+                        Generate and download QR codes directly from the inventory
+                        actions menu.
+                    </p>
 
                 </div>
 
             </div>
 
-        </section>
+        </div>
+
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="footer-inner">
 
             <!-- Col 1: Logo + Social + Copyright -->
